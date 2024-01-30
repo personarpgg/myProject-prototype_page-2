@@ -1,3 +1,5 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,12 +7,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- public 폴더의 style.css 파일 연결 -->
     <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 
 <body>
-    <form>
+    <form id="commentForm" action="/add-comment" method="POST">
         <div id="root">
             <!-- 사진 -->
             <div id="png">
@@ -22,8 +23,9 @@
             <!-- 타이틀 -->
             <div id="title"> 주제 제시 </div>
             <!-- 뎃글 영역 -->
-            <div id="comment"> 뎃글
-                <input type="text">
+            <div id="commentSection">
+                <div id="commentList"></div>
+                <input type="text" name="comment" placeholder="댓글 작성">
                 <input type="submit" value="작성">
             </div>
         </div>
